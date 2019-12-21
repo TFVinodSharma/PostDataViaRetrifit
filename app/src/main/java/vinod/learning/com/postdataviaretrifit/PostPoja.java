@@ -3,7 +3,7 @@ package vinod.learning.com.postdataviaretrifit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Post {
+public class PostPoja {
 
     @SerializedName("title")
     @Expose
@@ -52,7 +52,7 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post{" +
+        return "PostPoja{" +
                 "title='" + title + '\'' +
                 ", body='" + body + '\'' +
                 ", userId=" + userId +

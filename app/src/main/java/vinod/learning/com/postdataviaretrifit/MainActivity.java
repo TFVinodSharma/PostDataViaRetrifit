@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendPost(String title, String body) {
-        mAPIService.savePost(title, body, 1).enqueue(new Callback<Post>() {
+        mAPIService.savePost(title, body, 1).enqueue(new Callback<PostPoja>() {
             @Override
-            public void onResponse(Call<Post> call, Response<Post> response) {
+            public void onResponse(Call<PostPoja> call, Response<PostPoja> response) {
 
                 if(response.isSuccessful()) {
                     showResponse(response.body().toString());
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Post> call, Throwable t) {
+            public void onFailure(Call<PostPoja> call, Throwable t) {
                 Log.e(TAG, "Unable to submit post to API.");
             }
         });
